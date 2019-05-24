@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="container xd-container">
+
+    <h2>Lista de ofertas</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Descuento</th>
+        <th>Fecha</th>
+      </tr>
+    </table>
+      
+    <app-offer-list *ngFor="let offer of offers">
+      <tr>
+        <td>{{offer.title}}</td>
+        <td>{{offer.description}}</td>
+        <td>{{offer.discount}}</td>
+        <td>{{offer.expireDate}}</td>
+        <td><button class="btn btn-default" (click)="editOffer()">Edit Offer</button></td>
+        <td><button class="btn btn-default" (click)="addOffer()">Add New Offer</button></td>
+        <td><button class="btn btn-default" (click)="deleteOffer()">Delete Offer</button></td>
+      </tr>
+    </app-offer-list>
+      </tr>
+    </table>
+  </div>
+</div>
