@@ -24,11 +24,17 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {PageNotFoundComponent} from './parts/page-not-found/page-not-found.component';
 import {WelcomeComponent} from './parts/welcome/welcome.component';
+import { OfferListComponent } from './offers/offer-list/offer-list.component';
+import { OfferFormComponent } from './offers/offer-form/offer-form.component';
+import { OfferHomeComponent } from './offers/offer-home/offer-home.component';
 
 const appRoutes: Routes = [
   {path: 'welcome', component: WelcomeComponent},
   {path: '', component: WelcomeComponent},
-  {path: '**', component: PageNotFoundComponent}
+  {path: '**', component: PageNotFoundComponent},
+  {path: '/offerList', component: OfferListComponent},
+  {path: '/offerForm', component: OfferFormComponent},
+  {path: '/offerHome', component: OfferHomeComponent},
 ];
 
 @NgModule({
