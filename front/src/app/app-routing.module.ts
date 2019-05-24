@@ -31,10 +31,10 @@ import { OfferHomeComponent } from './offers/offer-home/offer-home.component';
 const appRoutes: Routes = [
   {path: 'welcome', component: WelcomeComponent},
   {path: '', component: WelcomeComponent},
-  {path: '**', component: PageNotFoundComponent},
   {path: 'offerList', component: OfferListComponent},
   {path: 'offerForm', component: OfferFormComponent},
   {path: 'offerHome', component: OfferHomeComponent},
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
