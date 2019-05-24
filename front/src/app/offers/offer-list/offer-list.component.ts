@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Offer } from 'models/offer';
+import { OfferServiceService } from 'Services/offer-service.service';
+import { Route } from '@angular/router';
 
 @Component({
   selector: 'app-offer-list',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OfferListComponent implements OnInit {
 
-  constructor() { }
+  @Input() data: Offer;
+  offers: any;
+  constructor(private serveOfers: OfferServiceService, private route: Route) { }
 
   ngOnInit() {
+    
   }
 
 }

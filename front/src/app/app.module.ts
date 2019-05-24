@@ -20,7 +20,7 @@
  * @author Vitaliy Fedoriv
  */
 
-import {BrowserModule} from '@angular/platform-browser';
+import * as platformBrowser from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
@@ -36,6 +36,7 @@ import {SpecialtiesModule} from './specialties/specialties.module';
 import {HttpErrorHandler} from './error.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { OfferListComponent } from './offer-list/offer-list.component';
+import { OffersModule } from './offers/offers.module';
 
 
 @NgModule({
@@ -44,7 +45,7 @@ import { OfferListComponent } from './offer-list/offer-list.component';
     OfferListComponent,
   ],
   imports: [
-    BrowserModule,
+    platformBrowser.BrowserModule,
     FormsModule,
     HttpClientModule,
     OwnersModule,
@@ -55,7 +56,8 @@ import { OfferListComponent } from './offer-list/offer-list.component';
     SpecialtiesModule,
     PartsModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    OffersModule
   ],
   providers: [
     HttpErrorHandler,
