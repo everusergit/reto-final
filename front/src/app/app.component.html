@@ -66,14 +66,17 @@
           <span>Specialties</span>
         </a>
       </li>
-      <li>
-        <a routerLink="/offerHome" routerLinkActive="active" title="offerHome">
-          <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
-          <span>Offers</span>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button"
+           aria-haspopup="true" aria-expanded="false">Offers<span class="caret"></span>
         </a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="/offerHome"><span aria-hidden="true"></span><span> Home</span></a>
+          </li>
+          <li><a routerLink="/offerList"><span aria-hidden="true"></span><span> List</span></a></li>
+        </ul>
       </li>
     </ul>
-
   </div>
 </nav>
 
